@@ -48,6 +48,7 @@ else
     echo "cloned repo '$ANSIBLE_DIR'"
 fi 
 echo "Started ansible playbook"
+echo "enviroment is '$env'"
 $VENV_DIR/bin/ansible-playbook -e service_name=$service_name -e env=$env -e ansible_python_interpreter=$VENV_DIR/bin/python main.yaml
 
 echo "comleted playbook"
