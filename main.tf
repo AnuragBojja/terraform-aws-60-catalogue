@@ -55,7 +55,7 @@ resource "aws_ami_from_instance" "catalogue" {
   tags = merge(
     local.common_tags,
     {
-        Name = "${local.common_name}-catalogue"
+        Name = "${local.common_name}-catalogue-ami"
     }
   )
 }
