@@ -9,5 +9,7 @@ locals {
   ami_id = data.aws_ami.roboshop_ami.id
   catalogue_sg_id = data.aws_ssm_parameter.catalogue_sg_id.value
   private_subnet_id = split(",",data.aws_ssm_parameter.private_subnet_ids.value)[0]
+  private_subnet_ids = split(",",data.aws_ssm_parameter.private_subnet_ids.value)
   shh_loginpass = data.aws_ssm_parameter.shh_loginpass.value
+  backend_alb_listener_arn = data.aws_ssm_parameter.backend_alb_listener_arn.value
 }

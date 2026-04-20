@@ -30,3 +30,6 @@ data "aws_ssm_parameter" "private_subnet_ids" {
 data "aws_ssm_parameter" "shh_loginpass" {
   name = "/roboshop/${var.env}/ssh/loginpass"
 }
+data "aws_ssm_parameter" "backend_alb_listener_arn" {
+  name = "/${var.project_name}/${var.env}/backend_alb_listener_arn"
+}
