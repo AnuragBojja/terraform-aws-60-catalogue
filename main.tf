@@ -142,7 +142,6 @@ resource "aws_autoscaling_group" "catalogue" {
   launch_template {
     id = aws_launch_template.catalogue.id
     version = aws_launch_template.catalogue.latest_version
-    name = aws_launch_template.catalogue.name
   }
   target_group_arns = [ aws_lb_target_group.catalogue.arn ]
   instance_refresh {
